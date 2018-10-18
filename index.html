@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>Quiz</title>
+        <link rel="stylesheet" type="text/css" href="index.css">
+        <script>
+            function allowDrop(ev) {
+                ev.preventDefault();
+            }
+
+            function drag(ev) {
+                ev.dataTransfer.setData("text", ev.target.id);
+            }
+
+            function drop(ev) {
+                ev.preventDefault();
+                var data = ev.dataTransfer.getData("text");
+                ev.target.appendChild(document.getElementById(data));
+            }        
+                    
+        </script>
+
+    </head>
+    <body>
+
+        <div class="question-container">
+            <div id="box1" class="question" draggable="true" ondragstart="drag(event)">Question 1</div>
+            <div id="box2" class="question" draggable="true" ondragstart="drag(event)">Question 2</div>
+        </div>
+
+        <div class="answer-container">
+            <div id="ans1" class="answer" ondrop="drop(event)" ondragover="allowDrop(event)"> Answer 1</div>
+            <div id="ans2" class="answer" >Answer 2</div>
+        </div>
+
+
+
+
+    </body>
+
+</html>

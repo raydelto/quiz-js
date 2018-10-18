@@ -1,0 +1,32 @@
+.question-container{
+    display: flex;
+}
+
+.answer-container{
+    display: flex;
+}
+
+
+
+.question {
+    height: 250px;
+    width: 100px;
+    margin: 50px;
+    padding: 100px;
+    background-color: antiquewhite;
+    font-size: 26px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 16px;
+}
+
+
+.answer {
+    width: 100px;
+    height: 50;
+    margin: 50px;
+    padding: 100px;
+    background-color: coral;
+    font-size: 26px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 16px;
+}
